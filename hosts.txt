@@ -1,0 +1,8 @@
+
+[linux_hosts]
+gateway ansible_host=192.168.0.35 ansible_user=gold 
+deb ansible_host=192.168.0.12 ansible_user=gold 
+admin ansible_host=192.168.0.142 ansible_user=gold 
+
+[linux_hosts:vars]
+ansible_ssh_private_key_file=.ssh_key

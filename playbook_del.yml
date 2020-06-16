@@ -1,0 +1,14 @@
+---
+- name: Remove old zabbix agent
+  hosts: all
+  become: yes
+
+  tasks:
+
+  - name: Remove zabbix agent (Debian hosts)
+    apt:
+      name: zabbix-agent
+      state: absent
+      purge: yes
+    environment:
+      RUNLEVEL: 1
